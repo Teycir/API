@@ -9,9 +9,6 @@ from flask import Flask, jsonify, request
 import json
 from treeinterpreter import treeinterpreter as ti
 
-
-
-
 # Load the data
 #--------------
 # processed data for applying the scoring model

@@ -9,10 +9,9 @@ import requests
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
-from os import environ
-
+import os
 def main():
-
+ 
     # streamlit run C:\Users\HP\source\repos\StreamlitOC7\StreamlitOC7\dashboard\dashboard.py
 
     '''
@@ -26,8 +25,9 @@ def main():
   
 
     # Logo "Prêt à dépenser"
-    
-    image = Image.open('logo.png')
+    path = os.path.dirname(__file__)
+    my_file = path+'/logo.png'
+    image = Image.open(my_file)
     st.sidebar.image(image, width=280)
 
     st.title('Tableau de bord - "Prêt à dépenser"')
