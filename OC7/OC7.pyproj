@@ -24,12 +24,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="api\" />
-    <Folder Include="images\" />
     <Folder Include="data\" />
     <Folder Include="models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\logo.png" />
+    <Content Include="logo.png" />
     <Content Include="data\data_agg.csv" />
     <Content Include="data\data_original.csv" />
     <Content Include="data\data_original_le.csv" />
