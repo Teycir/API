@@ -23,12 +23,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="api\" />
-    <Folder Include="dashboard\" />
+    <Folder Include="images\" />
     <Folder Include="data\" />
     <Folder Include="models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dashboard\logo.png" />
+    <Content Include="images\logo.png" />
     <Content Include="data\data_agg.csv" />
     <Content Include="data\data_original.csv" />
     <Content Include="data\data_original_le.csv" />
@@ -51,7 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="api\api_flask.py" />
-    <Compile Include="dashboard\dashboard.py" />
+    <Compile Include="dashboard.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
