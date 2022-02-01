@@ -5,7 +5,7 @@
     <ProjectGuid>cdd20110-e4ae-4b36-b421-a0bd2f96cd34</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>dashboard.py</StartupFile>
+    <StartupFile>api\api_flask.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

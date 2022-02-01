@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import os
 def main():
  
-    # streamlit run C:\Users\HP\source\repos\StreamlitOC7\StreamlitOC7\dashboard\dashboard.py
+    # streamlit run C:\Users\HP\source\repos\OC7\OC7\dashboard.py
 
     '''
     HOST = environ.get('SERVER_HOST', 'localhost')
@@ -23,7 +23,7 @@ def main():
 
     API_URL = "http://127.0.0.1:5000/api/"
   
-
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     # Logo "Prêt à dépenser"
     path = os.path.dirname(__file__)
     my_file = path+'/logo.png'
