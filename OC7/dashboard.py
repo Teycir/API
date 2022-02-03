@@ -1,7 +1,7 @@
 # TO RUN : $streamlit run dashboard/dashboard.py
 # Local URL: http://localhost:8501
-# Network URL: http://192.168.0.50:8501
-# Online URL : http://15.188.179.79
+# Network URL:  http://192.168.1.122:8501
+# Online URL : 
 
 import streamlit as st
 from PIL import Image
@@ -165,7 +165,6 @@ def main():
 
 
     if st.sidebar.checkbox('Show personal data'):
-
         # Get personal data
         personal_data = get_personal_data(select_sk_id)
 
