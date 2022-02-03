@@ -159,7 +159,7 @@ def main():
         content = json.loads(response.content.decode('utf-8'))
 
         # convert data to pd.Series
-        data_agg = pd.Series(content['data']["0"]).rename("Population (mean/mode)")
+        data_agg = pd.Series(content['data']["0"]).rename("Population (mean)")
 
         return data_agg
 
