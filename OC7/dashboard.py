@@ -141,7 +141,8 @@ def main():
         content = json.loads(response.content.decode('utf-8'))
 
         # convert data to pd.Series
-        personal_data = pd.Series(content['data']).rename("SK_ID {}".format(select_sk_id))
+        # personal_data = pd.Series(content['data']).rename("SK_ID {}".format(select_sk_id))
+        personal_data = content['data']
 
         return personal_data
 
@@ -172,13 +173,17 @@ def main():
             # Get aggregated data
             data_agg = get_aggregate()
             # Concatenation of the information to display
-            df_display = pd.concat([personal_data, data_agg], axis=1)
+            #display = pd.concat([personal_data, data_agg], axis=1)
+            #st.write(personal_data + '/' + data_agg)
+            st.write(data_agg)
+            #st.write(personal_data)
 
         else:
             # Display only personal_data
-            df_display = personal_data
+            # display = personal_data
+            st.write(personal_data)
         
-        st.dataframe(df_display)
+        #st.write(display)
 
 
     ##################################################
