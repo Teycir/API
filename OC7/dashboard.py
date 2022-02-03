@@ -170,17 +170,12 @@ def main():
         personal_data = get_personal_data(select_sk_id)
 
         if st.checkbox('Show population data'):
-            # Get aggregated data
+            # Show aggregated data
             data_agg = get_aggregate()
-            # Concatenation of the information to display
-            #display = pd.concat([personal_data, data_agg], axis=1)
-            #st.write(personal_data + '/' + data_agg)
             st.write(data_agg)
-            #st.write(personal_data)
 
         else:
-            # Display only personal_data
-            # display = personal_data
+            # Display personal_data
             st.write(personal_data)
         
         #st.write(display)
