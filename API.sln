@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30816.121
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "OC7", "OC7\OC7.pyproj", "{CDD20110-E4AE-4B36-B421-A0BD2F96CD34}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "API", "OC7\API.pyproj", "{CDD20110-E4AE-4B36-B421-A0BD2F96CD34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
