@@ -11,13 +11,9 @@ from treeinterpreter import treeinterpreter as ti
 
 # Load the data
 #--------------
-# processed data for applying the scoring model
 data_processed = pd.read_csv("data/data_processed.csv", index_col='SK_ID_CURR')
-# original data for displaying personal data
 data_original = pd.read_csv("data/data_original.csv", index_col='SK_ID_CURR')
-# label encoded original data for interpretation with surrogate model
 data_original_le = pd.read_csv("data/data_original_le.csv", index_col='SK_ID_CURR')
-# aggregated data of the train set for comparison to current applicant
 features_desc = pd.read_csv("data/features_descriptions.csv", index_col=0)
 
 # Load the models
