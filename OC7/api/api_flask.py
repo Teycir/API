@@ -18,17 +18,15 @@ data_original = pd.read_csv("data/data_original.csv", index_col='SK_ID_CURR')
 # label encoded original data for interpretation with surrogate model
 data_original_le = pd.read_csv("data/data_original_le.csv", index_col='SK_ID_CURR')
 # aggregated data of the train set for comparison to current applicant
-data_agg = pd.read_csv("data/data_agg.csv", index_col=0)
-# aggregated data of the train set for comparison to current applicant
 features_desc = pd.read_csv("data/features_descriptions.csv", index_col=0)
 
 # Load the models
 #----------------
 # Load the scoring model
 scikit_version = sklearn.__version__
-model = joblib.load("models/model_{version}.pkl".format(version=scikit_version))
+model = joblib.load("models/model_lgbm.pkl".format(version=scikit_version))
 # Load the surrogate model
-surrogate_model = joblib.load("models/surrogate_model_{version}.pkl".format(version=scikit_version))
+surrogate_model = joblib.load("models/surrogate_model_lgbm.pkl".format(version=scikit_version))
 
 
 ###############################################################
@@ -90,18 +88,6 @@ def personal_data():
         'data': personal_data_json
      })
 
-@app.route('/api/aggregations/')
-# Test : http://127.0.0.1:5000/api/aggregations
-def aggregations():
-
-    # Converting the pd.Series to JSON
-    data_agg_json = json.loads(data_agg.to_json())
-
-    # Returning the processed data
-    return jsonify({
-        'status': 'ok',
-        'data': data_agg_json
-     })
 
 @app.route('/api/features_desc/')
 # Test : http://127.0.0.1:5000/api/features_desc

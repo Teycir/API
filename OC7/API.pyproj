@@ -29,13 +29,12 @@
     <Folder Include="models\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="data\data_agg.csv" />
     <Content Include="data\data_original.csv" />
     <Content Include="data\data_original_le.csv" />
     <Content Include="data\data_processed.csv" />
     <Content Include="data\features_descriptions.csv" />
-    <Content Include="models\model_0.24.2.pkl" />
-    <Content Include="models\surrogate_model_0.24.2.pkl" />
+    <Content Include="models\model_lgbm.pkl" />
+    <Content Include="models\surrogate_model_lgbm.pkl" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
