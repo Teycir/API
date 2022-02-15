@@ -1,10 +1,13 @@
 # API:
-http://127.0.0.1:5000/api/sk_ids/  ==> Extract list of 'SK_ID_CURR' from the DataFrame
+* 1 http://127.0.0.1:5000/api/sk_ids/  ==> Extraire la liste des identifiants des clients
 
-http://127.0.0.1:5000/api/personal_data?SK_ID_CURR=384575  ==> Getting the data for the applicant
+* 2 http://127.0.0.1:5000/api/personal_data?SK_ID_CURR=384575  ==> Obtenir les données du client
 
-http://127.0.0.1:5000/api/features_desc  ==> Features description
+* 3 http://127.0.0.1:5000/api/features_desc  ==> Description des features
 
-http://127.0.0.1:5000/api/features_imp  ==> Features importance
+* 4 http://127.0.0.1:5000/api/features_imp  ==> Classement de l'importance des features 
 
-http://127.0.0.1:5000/api/local_interpretation?SK_ID_CURR=384575   ==> Computation of the prediction, bias and contribs from surrogate model
+* 5 http://127.0.0.1:5000/api/local_interpretation?SK_ID_CURR=384575   ==> Prédiction de solvabilité du client
+
+
+P.S: http://127.0.0.1:5000/ est l'url locale a remplacer par l'url sur serveur
