@@ -9,7 +9,12 @@ from flask import Flask, jsonify, request
 import json
 from treeinterpreter import treeinterpreter as ti
 import os
+import streamlit as st 
 
+
+# Warnings off 
+#--------------
+st.set_option('deprecation.showPyplotGlobalUse', False)
 # Load the data
 #--------------
 
