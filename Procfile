@@ -1,1 +1,1 @@
-web: gunicorn app:api/api_flask.py
+web: streamlit app:api/api_flask.py
