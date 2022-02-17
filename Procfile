@@ -1,1 +1,1 @@
-web: streamlit app:api/api_flask.py
+python api/api_flask.py
