@@ -8,21 +8,36 @@ import joblib
 from flask import Flask, jsonify, request
 import json
 from treeinterpreter import treeinterpreter as ti
+import os
 
 # Load the data
 #--------------
-data_processed = pd.read_csv("data/data_processed.csv", index_col='SK_ID_CURR')
-data_original = pd.read_csv("data/data_original.csv", index_col='SK_ID_CURR')
-data_original_le = pd.read_csv("data/data_original_le.csv", index_col='SK_ID_CURR')
-features_desc = pd.read_csv("data/features_descriptions.csv", index_col=0)
+
+#pathabsolutedir = os.path.dirname(os.path.abspath(__file__))
+#PATH_INPUT = pathabsolutedir+"/input/"
+#FILENAME_TRAIN = PATH_INPUT+'application_train_sample.csv' # sample of train set for online version 25MB
+#FILENAME_TEST = PATH_INPUT+'application_test.csv'
+#FILENAME_MODEL = pathabsolutedir+'/optimized_model.sav'
+#data_processed = pd.read_csv( pathabsolutedir +'/input/data_processed.csv', index_col='SK_ID_CURR')
+#data_original_le = pd.read_csv( pathabsolutedir +'/input/data_original_le.csv', index_col='SK_ID_CURR')
+#features_desc = pd.read_csv(pathabsolutedir  +  "/input/features_descriptions.csv", index_col=0)
+
+pathabsolutedir = os.path.dirname(os.path.abspath(__file__))
+PATH_DATA = pathabsolutedir+"/data/"
+PATH_MODELS = pathabsolutedir+"/models/"
+
+data_processed = pd.read_csv(PATH_DATA +"data_processed.csv", index_col='SK_ID_CURR')
+data_original = pd.read_csv(PATH_DATA +"data_original.csv", index_col='SK_ID_CURR')
+data_original_le = pd.read_csv(PATH_DATA +"data_original_le.csv", index_col='SK_ID_CURR')
+features_desc = pd.read_csv(PATH_DATA +"features_descriptions.csv", index_col=0)
 
 # Load the models
 #----------------
 # Load the scoring model
 scikit_version = sklearn.__version__
-model = joblib.load("models/model_lgbm.pkl".format(version=scikit_version))
+model = joblib.load(PATH_MODELS +"model_lgbm.pkl")
 # Load the surrogate model
-surrogate_model = joblib.load("models/surrogate_model_lgbm.pkl".format(version=scikit_version))
+surrogate_model = joblib.load(PATH_MODELS +"surrogate_model_lgbm.pkl".format(version=scikit_version))
 
 
 ###############################################################

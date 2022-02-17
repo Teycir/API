@@ -5,7 +5,7 @@
     <ProjectGuid>cdd20110-e4ae-4b36-b421-a0bd2f96cd34</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>api\api_flask.py</StartupFile>
+    <StartupFile>api_flask.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,7 +24,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="api\" />
     <Folder Include="data\" />
     <Folder Include="models\" />
   </ItemGroup>
@@ -38,7 +37,7 @@
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="api\api_flask.py" />
+    <Compile Include="api_flask.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
