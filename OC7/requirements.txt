@@ -4,10 +4,8 @@ joblib
 flask 
 jsonify
 treeinterpreter 
-streamlit  
 requests
 pandas 
 matplotlib
 scikit-learn == 0.24.2
-gunicorn==20.1.0
 lightgbm
