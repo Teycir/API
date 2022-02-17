@@ -13,14 +13,6 @@ import os
 # Load the data
 #--------------
 
-#pathabsolutedir = os.path.dirname(os.path.abspath(__file__))
-#PATH_INPUT = pathabsolutedir+"/input/"
-#FILENAME_TRAIN = PATH_INPUT+'application_train_sample.csv' # sample of train set for online version 25MB
-#FILENAME_TEST = PATH_INPUT+'application_test.csv'
-#FILENAME_MODEL = pathabsolutedir+'/optimized_model.sav'
-#data_processed = pd.read_csv( pathabsolutedir +'/input/data_processed.csv', index_col='SK_ID_CURR')
-#data_original_le = pd.read_csv( pathabsolutedir +'/input/data_original_le.csv', index_col='SK_ID_CURR')
-#features_desc = pd.read_csv(pathabsolutedir  +  "/input/features_descriptions.csv", index_col=0)
 
 pathabsolutedir = os.path.dirname(os.path.abspath(__file__))
 PATH_DATA = pathabsolutedir+"/data/"
