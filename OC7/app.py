@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-# TO RUN : $python api/api_flask.py
 
 # Load librairies
 import pandas as pd
@@ -26,7 +25,7 @@ features_desc = pd.read_csv(PATH_DATA +"features_descriptions.csv", index_col=0)
 # Load the models
 #----------------
 # Load the scoring model
-scikit_version = sklearn.__version__
+
 model = joblib.load(PATH_MODELS +"model_lgbm.pkl")
 # Load the surrogate model
 surrogate_model = joblib.load(PATH_MODELS +"surrogate_model_lgbm.pkl")
