@@ -1,1 +1,1 @@
-web: gunicorn run: OC7/api_flask.py
+web: gunicorn OC7/api_flask:app --log-file -
