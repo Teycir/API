@@ -1,1 +1,1 @@
-web:python app:api_flask.py
+web: sh setup.sh && streamlit run app:OC7/api_flask.py
