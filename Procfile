@@ -1,1 +1,1 @@
-web: streamlit run app:OC7/api_flask.py
+web: streamlit run OC7/api_flask.py
