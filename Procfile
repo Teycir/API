@@ -1,1 +1,1 @@
-web: streamlit run OC7/api_flask.py
+web: gunicorn run: OC7/api_flask.py
