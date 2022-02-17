@@ -1,11 +1,12 @@
+gunicorn
 pandas
 sklearn
 joblib
 flask 
 jsonify
 treeinterpreter 
-streamlit  
 requests
 pandas 
 matplotlib
 scikit-learn == 0.24.2
+lightgbm
